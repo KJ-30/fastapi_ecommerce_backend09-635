@@ -1,6 +1,9 @@
 from datetime import datetime
 from pydantic import BaseModel, validator
-from enum import StrEnum
+try:
+    from enum import StrEnum
+except ImportError:
+    from strenum import StrEnum
 
 
 class Buckets(StrEnum):

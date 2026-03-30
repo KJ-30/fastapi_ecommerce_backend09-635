@@ -1,5 +1,8 @@
 from pydantic import BaseModel, Field
-from enum import StrEnum
+try:
+    from enum import StrEnum
+except ImportError:
+    from strenum import StrEnum
 
 
 class OrderType(StrEnum):
