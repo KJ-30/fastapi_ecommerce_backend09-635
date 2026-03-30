@@ -1,8 +1,8 @@
 from pydantic import BaseModel, Field
-from enum import StrEnum
+from enum import Enum
 
 
-class OrderType(StrEnum):
+class OrderType(str, Enum):
     asc = "asc"
     desc = "desc"
 
