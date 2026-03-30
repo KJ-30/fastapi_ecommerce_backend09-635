@@ -1,9 +1,9 @@
 from datetime import datetime
 from pydantic import BaseModel, validator
-from enum import StrEnum
+from enum import Enum
 
 
-class Buckets(StrEnum):
+class Buckets(str, Enum):
     daily = "daily"
     weekly = "weekly"
     monthly = "monthly"
